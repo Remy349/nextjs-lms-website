@@ -1,8 +1,13 @@
 import "@/app/globals.css";
 import type { Metadata } from "next";
+import Header from "./_components/header/header";
+import { font } from "@/lib/fonts";
 
 export const metadata: Metadata = {
-  title: "LMS Website",
+  title: {
+    default: "LMS Website",
+    template: "%s | LMS Website",
+  },
 };
 
 export default function LandingLayout({
@@ -12,7 +17,10 @@ export default function LandingLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className={`${font.className} antialiased bg-muted/50`}>
+        <Header />
+        <main className="mt-16">{children}</main>
+      </body>
     </html>
   );
 }
