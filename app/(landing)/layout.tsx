@@ -17,9 +17,9 @@ export default function LandingLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className} antialiased bg-muted/50`}>
+      <body className={`${font.className} bg-muted/50 antialiased`}>
         <Header />
-        <main className="mt-16">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );
