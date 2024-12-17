@@ -40,7 +40,11 @@ export default function DashboardLayout({
                 <SidebarTrigger />
               </div>
             </header>
-            <main className="px-6">{renderNode[role]}</main>
+            <main className="px-6">
+              <section className="pt-[2.5rem] pb-[3rem]">
+                {renderNode[role]}
+              </section>
+            </main>
           </SidebarInset>
         </SidebarProvider>
       </body>
