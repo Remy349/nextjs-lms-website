@@ -1,10 +1,12 @@
 import { createContainer } from "@evyweb/ioctopus";
 import { createUserModule } from "./modules/user.module";
 import { DI_RETURN_TYPES, DI_SYMBOLS } from "./types";
+import { createCategoryModule } from "./modules/category.module";
 
 const container = createContainer();
 
 container.load(Symbol("UserModule"), createUserModule());
+container.load(Symbol("CategoryModel"), createCategoryModule());
 
 export function getInjection<
   K extends keyof DI_RETURN_TYPES,
