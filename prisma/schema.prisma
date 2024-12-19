@@ -24,3 +24,11 @@ model User {
 
   @@map("users")
 }
+
+model Category {
+  id        String   @id @default(uuid())
+  name      String   @db.VarChar(20)
+  createdAt DateTime @default(now())
+
+  @@map("categories")
+}
