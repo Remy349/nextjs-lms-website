@@ -7,6 +7,7 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import DashboardSidebar from "./_components/sidebar/dashboard-sidebar";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Dashboard | LMS Website",
@@ -34,7 +35,7 @@ export default function DashboardLayout({
       <body className={`${font.className} antialiased`}>
         <SidebarProvider>
           <DashboardSidebar />
-          <SidebarInset>
+          <SidebarInset className="bg-muted/50">
             <header className="sticky top-0 bg-background z-50 border-b">
               <div className="h-12 flex items-center px-6">
                 <SidebarTrigger />
@@ -47,6 +48,7 @@ export default function DashboardLayout({
             </main>
           </SidebarInset>
         </SidebarProvider>
+        <Toaster richColors position="top-center" />
       </body>
     </html>
   );
